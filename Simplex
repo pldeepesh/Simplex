@@ -15,7 +15,6 @@
  * prints the faces of the n simplex on the console.
  */
 package simplex;
-import java.math.BigInteger;
 import java.util.Scanner;
 public class Simplex 
 {
@@ -78,13 +77,13 @@ public static void main(String[] args)
 		
 		System.out.println("0-face:"+(Dimension+1));
 		
-		Pascals_triangle pt = new Pascals_triangle(Dimension);
+		Pascals_triangle pt = new Pascals_triangle(Dimension,Faces);
 		
 		
 				for(int j=0;j<Faces-1;Faces--)
 		{	
 			
-			BigInteger Dface = pt.getface(Dimension+2, k+3);
+			long Dface = pt.getface(Dimension+2, k+3);
 			System.out.println((k+1)+"-faces:"+Dface);
 			k++;
         }
